@@ -3,12 +3,12 @@
 {% block content %}
     <div class="columns is-multiline">
         {% for product in products %}
-            <div class="column is-3">
+            <div class="column is-4">
                 <div class="card">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <h4 class="title is-5">{{ product.title }}</h4>
+                                <h4 class="title is-5 centered">{{ product.title }}</h4>
                                 <p class="subtitle is-6">{{ product.subtitle }}</p>
                                 <p class="subtitle is-6">£ {{ product.price }}</p>
                             </div>
