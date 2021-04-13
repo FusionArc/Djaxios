@@ -20,5 +20,7 @@ class Product(models.Model):
     description = models.TextField(blank=True, null=True)
 
     price=models.FloatField()
+
+    
     def __str__(self):
         return self.title
