@@ -4,9 +4,11 @@ from django.db import models
 class Category(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
+    ordering = models.IntegerField(default=0)
 
     class Meta:
         verbose_name_plural = 'Categories'
+        ordering = ('ordering',)
 
     def __str__(self):
         return self.title
@@ -22,6 +24,10 @@ class Product(models.Model):
 
     price=models.DecimalField(decimal_places=2, max_digits=1000)
 
-    
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('-date_added',)
+
     def __str__(self):
         return self.title
