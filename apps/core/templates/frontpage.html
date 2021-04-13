@@ -8,13 +8,14 @@
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title is-5">{{ product.title }}</p>
-                                <p class="subtitle">{{ product.subtitle }}</p>
-                                <p class="subtitle">£ {{ product.price }}</p>
+                                <h4 class="title is-5">{{ product.title }}</h4>
+                                <p class="subtitle is-6">{{ product.subtitle }}</p>
+                                <p class="subtitle is-6">£ {{ product.price }}</p>
                             </div>
-                          </div>
+                        </div>
+                    </div>
                     <footer class="card-footer">
-                        <a href="#" class="card-footer-item">View</a>
+                        <a href="{% url 'product_detail' product.slug %}" class="card-footer-item">View</a>
                     </footer>
                 </div>
             </div>

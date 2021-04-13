@@ -16,7 +16,7 @@ from apps.store.views import product_detail
 
 urlpatterns = [
     path('', frontpage, name='frontpage'),
-    path('contact/', contact, name='contact'),
     path('admin/', admin.site.urls),
-    path('<slug:slug>/', product_detail, name='product_detail')
+    path('contact/', contact, name='contact'),
+    path('<slug:slug>/', product_detail, name='product_detail'),
 ]
