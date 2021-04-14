@@ -3,17 +3,23 @@
 {% block title %} {{ product.title }} |{% endblock title %}
 
 {% block content %}
-
-    <h1 class="title">{{ product.title }}</h1>
+    <div id="productapp">
+        <h1 class="title">{{ product.title }}</h1>
+        
+        {% if product.subtitle %}
+            <p class="subtitle">{{ product.subtitle }}</p>
+        {% endif %}
     
-    {% if product.subtitle %}
-        <p class="subtitle">{{ product.subtitle }}</p>
-    {% endif %}
-
-    {% if product.description %}
-        <p class="description"> {{ product.description }}</p>
-    {% endif %}
-
-    <p class="subtitle">£ {{ product.price }}</p>
-
+        {% if product.description %}
+            <p class="description"> {{ product.description }}</p>
+        {% endif %}
+    
+        <p class="subtitle">£ {{ product.price }}</p>
+    </div>
 {% endblock content %}
+
+{% block scripts %}
+    <script>
+        console.log('Script')
+    </script>
+{% endblock scripts %}

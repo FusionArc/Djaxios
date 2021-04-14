@@ -30,6 +30,6 @@ class Cart(object):
 
     def save(self):
         self.session[settings.CART_SESSION_ID] = self.cart
-        self.session.modified = True
+        self.session.modified = True 
 
 
