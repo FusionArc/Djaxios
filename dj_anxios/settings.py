@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'apps.cart',
     'apps.core',
     'apps.store'
-
 ]
 
 MIDDLEWARE = [
