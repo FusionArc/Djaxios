@@ -11,6 +11,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# CART
+
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'cart'
+
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
