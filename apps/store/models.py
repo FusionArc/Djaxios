@@ -23,7 +23,7 @@ class Product(models.Model):
     description = models.TextField(blank=True, null=True)
     is_featured = models.BooleanField(default=False)
 
-    price=models.DecimalField(decimal_places=2, max_digits=1000)
+    price=models.IntegerField()
 
     date_added = models.DateTimeField(auto_now_add=True)
 

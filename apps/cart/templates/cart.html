@@ -4,4 +4,18 @@
 
 {% block content %}
     <h1 class="title">Cart</h1>
+
+    {% if cart %}
+        {% for item in cart %}
+            {% with product=item.product %}
+                <p>{{ product.title }}</p>
+            {% endwith %}
+        {% endfor %}
+    {% else %}
+        <p> Your cart is empty </p>
+    {% endif %}
+
+    {% for item in cart.products %}
+        Test
+    {% endfor %}
 {% endblock content %}

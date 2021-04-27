@@ -42,31 +42,23 @@
                     }
 
                     fetch('/api/add_to_cart/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFToken': '{{ csrf_token }}'
-                    },
-                    credentials: 'same-origin',
-                    body: JSON.stringify(data)
-                })
-                .then((response) => {
-                    console.log(response)
-
-                    this.showMessage = true
-
-                    store.commit('increment', 1);
-
-                    setTimeout(() => {
-                        this.showMessage = false
-                    }, 2000)
-                })
-                .catch(function (error) {
-                    console.log('Error 2');
-                    console.log(error);
-                })
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': '{{ csrf_token }}'
+                        },
+                        credentials: 'same-origin',
+                        body: JSON.stringify(data)
+                    })
+                    .then((response) => {
+                        console.log(response)
+                    })
+                    .catch(function (error) {
+                        console.log('Error 2');
+                        console.log(error);
+                    })
+                }
             }
-        }
         });
     </script>
 {% endblock scripts %}

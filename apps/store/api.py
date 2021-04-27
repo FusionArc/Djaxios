@@ -8,6 +8,7 @@ from .models import Product
 
 def api_add_to_cart(request):
     data = json.loads(request.body)
+    
     jsonresponse = {'success': True}
     product_id = data['product_id']
     update = data['update']
