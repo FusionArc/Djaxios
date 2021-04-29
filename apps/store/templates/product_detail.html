@@ -13,10 +13,10 @@
         {% if product.description %}
             <p class="description"> {{ product.description }}</p>
         {% endif %}
-
+        </br>
         <p class="subtitle">£ {{ product.price }}</p>
 
-        <button @click="addToCart({{ product.id }})">Add To Cart</button>
+        <button @click="addToCart({{ product.id }})" class="button is-success">Add To Cart</button>
     </div>
 {% endblock content %}
 
@@ -24,7 +24,7 @@
     <script>
         var productapp = new Vue({
             el: '#productapp',
-            delimeters: ['[[', ']]'],
+            delimiters: ['[[', ']]'],
             data () {
                 return {}
             },

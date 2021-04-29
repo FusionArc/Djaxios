@@ -20,6 +20,7 @@ urlpatterns = [
     # API
     path('api/add_to_cart/', api_add_to_cart, name='api_add_to_cart'),
     path('api/remove_from_cart/', api_remove_from_cart, name='api_remove_from_cart'),
+   
 
     # Store
     path('<slug:slug>/', category_detail, name='category_detail'),
