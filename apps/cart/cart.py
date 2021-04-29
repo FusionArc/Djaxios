@@ -46,6 +46,12 @@ class Cart(object):
 
         self.save()
 
+
+    def remove(self, prooduct_id):
+        if prooduct_id in self.cart:
+            del self.cart[prooduct_id]
+            self.save()
+
     def save(self):
         self.session[settings.CART_SESSION_ID] = self.cart
         self.session.modified = True
