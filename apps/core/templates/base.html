@@ -35,7 +35,7 @@
                 {% endfor %}
                 <div class="navbar-item" id="navbarapp">
                     <a class='button is-primary' href="{% url 'cart' %}">
-                        Cart ([[ numItems ]])
+                        Cart [[ numItems ]]
                     </a>
                 </div>
             </div>
@@ -79,7 +79,7 @@
         });
         var navbarapp = new Vue({
             el: '#navbarapp',
-            delimeters: ['[[', ']]'],
+            delimiters: ['[[', ']]'],
             store: store,
             data () {
                 return {

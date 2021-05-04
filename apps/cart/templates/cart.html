@@ -37,6 +37,14 @@
                             <td><button class="is-danger" @click="removeFromCart(product.id)">Remove from Cart</button></td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total:</td>
+                            <td>[[ numItems ]]</td>
+                            <td></td>
+                            <td>[[ totalCost ]]</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
