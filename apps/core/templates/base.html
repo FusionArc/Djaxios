@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        {% block title %} {% endblock title %} Dj-Anxios
+        {% block title %} {% endblock title %} Retroracks
     </title>
-    {% comment %} <link rel="stylesheet" href="{% static 'styles.css' %}"> {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    {% comment %} <link rel="stylesheet" href="{% static 'styles.css' %}"> {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  
 </head>
 
 <body>
@@ -20,12 +19,11 @@
         <div class="navbar-brand">
             <a href="{% url 'frontpage' %}" class="navbar-item">Retroracks</a>
             
-            <a role="button" class="navbar-burger burger" aria-label="menu">
+            <a @click="toggleMenu()" role="button" class="navbar-burger burger" aria-label="menu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
-
         </div>
 
         <div id="main-navbar" class="navbar-menu">
@@ -60,7 +58,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
     <script>
         var store = new Vuex.Store({
@@ -77,14 +75,27 @@
 				}
 			}
         });
+
         var navbarapp = new Vue({
             el: '#navbarapp',
             delimiters: ['[[', ']]'],
             store: store,
             data () {
                 return {
-                    numItems: store.state.numItems
+                    menuClass: false
                 }
+            },
+            computed: {
+				numItems: function() {
+					return store.state.numItems
+				}
+			},
+			methods: {
+				toggleMenu() {
+        			console.log('toggleMenu');
+	
+    				this.menuClass = !this.menuClass;
+				}				
             }
         });
     </script>
