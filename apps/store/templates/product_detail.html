@@ -4,6 +4,7 @@
 
 {% block content %}
     <div id="productapp">
+        <img src="/{{ product.image }}" alt="{{ product.title }}">
         <h1 class="title">{{ product.title }}</h1>
 
         {% if product.subtitle %}

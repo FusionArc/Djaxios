@@ -30,7 +30,7 @@ class Product(models.Model):
     price = models.FloatField()
     is_featured = models.BooleanField(default=False)
 
-    image = models.ImageField(upload_to='media/uploads', blank=True, null=True)
+    image = models.ImageField(upload_to='media/uploads/', blank=True, null=True)
     thumbnail = models.ImageField(upload_to='media/uploads', blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
