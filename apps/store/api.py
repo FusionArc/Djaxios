@@ -34,7 +34,7 @@ def api_checkout(request):
 
         cart.clear()
 
-    return redirect('/')
+    return JsonResponse(jsonresponse)
 
 
 def api_add_to_cart(request):
