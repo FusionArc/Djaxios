@@ -6,6 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%11$h!nv-7!$f*ol92!9t5qullu20&8_c!)b))ds990vr(wzj1'
+STRIPE_API_KEY_PUBLISHABLE = "pk_test_CNjmrHbvtgogUJImcLxhlK15"
+STRIPE_API_KEY_HIDDEN = "sk_test_xNmM9WXHsxQZ8U3PGopqVeXg"
 
 DEBUG = True
 
